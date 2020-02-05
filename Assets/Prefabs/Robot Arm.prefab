@@ -184,8 +184,6 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 0
-  - 0
 --- !u!65 &412393368008780564
 BoxCollider:
   m_ObjectHideFlags: 0

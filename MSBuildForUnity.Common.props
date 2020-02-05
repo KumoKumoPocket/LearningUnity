@@ -2,12 +2,12 @@
   <PropertyGroup>
     <MSBuildForUnityVersion>0.8.3</MSBuildForUnityVersion>
     
-    <MSBuildForUnityGeneratedOutputDirectory>D:\Personal Projects\Hololens2Testing\MSBuild\Projects</MSBuildForUnityGeneratedOutputDirectory>
-    <UnityProjectAssetsPath>D:\Personal Projects\Hololens2Testing\Assets</UnityProjectAssetsPath>
+    <MSBuildForUnityGeneratedOutputDirectory>D:\Personal Projects\ProceduralAnimetion\MSBuild\Projects</MSBuildForUnityGeneratedOutputDirectory>
+    <UnityProjectAssetsPath>D:\Personal Projects\ProceduralAnimetion\Assets</UnityProjectAssetsPath>
     <MSBuildForUnityDefaultOutputPath>$(UnityProjectAssetsPath)\Dependencies</MSBuildForUnityDefaultOutputPath>
     
-    <UnityCurrentPlatform>WSA</UnityCurrentPlatform>
-    <UnityCurrentTargetFramework>net46</UnityCurrentTargetFramework>
+    <UnityCurrentPlatform>WindowsStandalone64</UnityCurrentPlatform>
+    <UnityCurrentTargetFramework>netstandard2.0</UnityCurrentTargetFramework>
     
     <UnityMajorVersion>2018</UnityMajorVersion>
     <UnityMinorVersion>4</UnityMinorVersion>
