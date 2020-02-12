@@ -12,7 +12,7 @@ public class PointOfInterestWithEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(OnPointOfInterestEntered != null)
+        if(OnPointOfInterestEntered != null && other.gameObject.tag == "RealPlayer")
         {
             OnPointOfInterestEntered(this);
         }

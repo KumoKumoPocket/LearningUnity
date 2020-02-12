@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class AchievementSystemWithEvent : MonoBehaviour
 {
@@ -9,11 +10,28 @@ public class AchievementSystemWithEvent : MonoBehaviour
         PointOfInterestWithEvent.OnPointOfInterestEntered += 
             PointOfInterestWithEvent_OnPointOfInterestEntered;
 
+        PointOfInterestWithEvent.OnPointOfInterestEntered += 
+            PointOfInterestWithEvent_OnPointOfInterestEntered02;
+
     }
 
-    private void PointOfInterestWithEvent_OnPointOfInterestEntered(PointOfInterestWithEvent value)
+    private void OnDestroy()
     {
-        string achievementKey = "achievement_" + value.PoiName;
+        PointOfInterestWithEvent.OnPointOfInterestEntered -=
+            PointOfInterestWithEvent_OnPointOfInterestEntered;
+
+        PointOfInterestWithEvent.OnPointOfInterestEntered -=
+            PointOfInterestWithEvent_OnPointOfInterestEntered02;
+    }
+
+    private void PointOfInterestWithEvent_OnPointOfInterestEntered02(PointOfInterestWithEvent obj)
+    {
+        Debug.Log("OMG! Is that a " + obj.PoiName + " reference!?!");
+    }
+
+    private void PointOfInterestWithEvent_OnPointOfInterestEntered(PointOfInterestWithEvent obj)
+    {
+        string achievementKey = "achievement_" + obj.PoiName;
 
         if (PlayerPrefs.GetInt(achievementKey) == 1)
         {
@@ -21,7 +39,7 @@ public class AchievementSystemWithEvent : MonoBehaviour
         }
 
         PlayerPrefs.SetInt(achievementKey, 1);
-        Debug.Log("Unlocked " + value.PoiName);
+        Debug.Log("Unlocked " + obj.PoiName);
     }
 }
     
